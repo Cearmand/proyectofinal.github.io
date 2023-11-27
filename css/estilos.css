@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Didact+Gothic&family=Questrial&family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap');*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    font-family: 'Courier Prime', monospace;
+    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Questrial', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    background-image: url(../jpg/estudiante_1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top: -30px;
+    padding: 500px;
+}
+
+.nave{
+    background: #fff;
+    width: 1170px;
+    margin: -400px auto;
+    position: relative;
+    left: -160%;
+    border-radius: 50px 50px 50px 50px;
+}
+.nave ul{
+    list-style: none;
+}
+.menu > li{
+    position: relative;
+    top: -30%;
+    display: inline-block; /*sirve para poner las palabra en una sola linea */
+}
+.menu > li > a{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #5a5552;
+}
+.sub_title{
+    color: #d3cfcc;
+    position: relative;
+    top: 450px;
+    left: -370px;
+    font-size: 130%;
+    margin: -10px;
+}
+.titulo{
+    color: #141414;
+    position: relative;
+    top: 455px;
+    left: -370px;
+    font-size: 300%;
+}
+.input_container,.a{
+    width: 100%;
+    background: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: .6em 5em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    position: relative;
+    text-decoration: none;
+}
+.titu_curso{
+ font-size: 95%;
+}
+.text{
+    font-size: 70%;
+}
+.contorno{
+    padding: 11px;
+}
+
+.container{
+    border-radius: 20px 1px 20px 1px;
+    position: relative;
+    top: 470px;
+    left: -400px;
+    background-color: #8d7c65;
+    padding: .8em 0;
+    border: none;
+}
+.a_redirigir{
+    text-decoration: none;
+    color: #fff;
+    font-size:20px;
+}
+.registro_mate{
+   position: relative;
+   border-radius: 20px 1px 20px 1px;
+   background-color: #85372e;
+}
+.registro_ingle{
+    position: relative;
+    border-radius: 20px 1px 20px 1px;
+    background-color: #ac921c;
+ }
+ .registro_fifu{
+    position: relative;
+    border-radius: 20px 1px 20px 1px;
+    background-color: #26695c;
+ }
+.group_cards{
+    display: flex;
+}
+.tarjeta1,.tarjeta2,.tarjeta3{
+    margin: 65px;    
+    text-align: center;
+    font-size: x-large;
+    overflow-wrap: normal;
+    padding: 1em 2em;
+    background: #977f6f;
+   
+    position: relative;
+    top: -200px;
+
+}
+.tarjeta1{
+    background-color: #E74C3C;
+    color: #fff;
+}
+.tarjeta2{
+    background-color: #F1C40F; 
+    color: #fff;
+}
+.tarjeta3{
+    background-color: #48C9B0;
+    color: #fff;
+}
+
+.input_curso{
+    border-radius: 25px 20px 25px 20px;
+    position: relative;
+    top: -1px;
+    background-color: rgb(255, 254, 253);
+    padding: .91em 0;
+    border: none;
+}
+.usuario{
+    color: #fff;
+    position: relative;
+    top: -98px;
+    left: 28em;
+    font-size: large;
+}
+.guardado{
+    color: #087413;
+}
+ img{
+    position: relative;
+    top: -450px;
+} 
+.calculadora{
+    position: relative;
+    top: 4px
+}
+.idioma{
+    position: relative;
+    top: 4px;
+    width: 50px;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap');
+
+.cuerpo{
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;  
+    display: flex;
+    min-height: 100vh;
+}
+.form{
+    background-color: #fff;
+    margin: auto;
+    width: 100px
+    max-width: 100px; 
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);    
+    text-align: center;  
+}
+
+.form_title{
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+.form_container{
+    margin-top: 3em;
+    display: grid;
+    gap: 1.2em;
+}
+.form_group{
+    position: relative;
+    --color: #7D7C7C;
+}
+.form_input{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Roboto', sans-serif;
+}
+.form_input:not(:placeholder-shown){
+    color: #4d4646;
+}
+/* Sirve para mover los label 
+en .form_input:not(:placeholder-shown)+.form_label sirve para los placeholder se queden vacios*/
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown)+.form_label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #17194c;
+}
+/* el label le damos movimiento */
+.form_label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+.form_submit{
+    background-color: #045757;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+.form_line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #044343;
+    transform: scale(0);
+    transform: left bottom;
+    }
+
+.form_input:focus ~ .form_line,
+.form_input:not(:placeholder-shown)~.form_line{
+    transform: scale(1);
+}
+
+@media (max-width:425px){
+    .form_title{
+        font-size: 1.8rem;
+    }
+}
+.regi_a{
+    color: #045757;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+#centrar{
+text-align: center;
+} 
+
+/* ------------------------------------------------------------------------------------------------ */
+
+.input_one{
+    /* width: 100%;  */
+    background: none;
+    color: #706c6c;
+    font-size: 1;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Roboto', sans-serif;
+}
+.label1{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+.input_one:not(:placeholder-shown){
+    color: #4d4646;
+}
+.input_one:focus + .label1,
+.input_one:not(:placeholder-shown)+.label1{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #17194c;
+}   
+.input_two{
+    /* width: 100%; */
+    background: none;
+    color: #706c6c;
+    font-size: 1;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Roboto', sans-serif;
+}
+.input_two:not(:placeholder-shown){
+    color: #4d4646;
+}
+.input_two:focus + .label2,
+.input_two:not(:placeholder-shown)+.label2{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #17194c;
+}   
+.label1{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+.label2{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    
+    top: 0;
+    right: 100px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+.line_one{
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 49%; 
+    height: 1px; /*tamaño de la linea */
+    background-color: #044343;
+    transform: scale(0);
+    transform: left bottom; 
+}
+.input_one:focus ~ .line_one,
+.input_one:not(:placeholder-shown)~.line_one{
+    transform: scale(1);
+}
+.line_two{
+    position: absolute;
+    bottom: 0;
+    left: 10;
+    width: 50%; 
+    height: 1px; 
+    background-color: #044343;
+    transform: scale(0);
+    transform: left bottom; 
+}
+.input_two:focus ~ .line_two,
+.input_two:not(:placeholder-shown)~.line_two{
+    transform: scale(1);
+}
+html{
+    scroll-behavior: smooth;
+}

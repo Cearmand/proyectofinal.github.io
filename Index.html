@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Garden</title>
+    <link rel="stylesheet" href="css/estilos.css"> 
+</head>
+<body>
+    <section id="inicio"></section>
+    <header>
+        <img src="jpg/icons8-usuario-48.png" alt="">
+        <nav class="nave">
+            <h4 id="usuario" class="usuario"><a class="input_container" href="#cuerpo">Registrate</a></h4>
+        <ul class="menu">
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">CONTACTOS</a></li>
+            <li><a href="#">SOBRE</a></li>
+            <li><a href="#">GALERIA</a></li>
+        </ul>
+        </nav>
+        <h3 class="sub_title">Bienvenidos a nuestro sitio web</h3>
+        <h1 class="titulo">Educando mentes, forjando el futuro.</h1>
+        <div class="container"><a class="input_container" href="#cuerpo">Registrate</a></div>
+    </header>
+    <div class="group_cards">
+        <div class="tarjeta1">
+            <h3 class="titu_curso">Curso de Matematicas</h3>
+            <img src="jpg/icons8-calculadora-50.png" class="calculadora">
+            <p class="text">Explora patrones, números y ecuaciones para desarrollar lógica analítica y resolución.</p>
+            <div class="registro_mate"><a href="paginas/mate.html" class="a_redirigir">REGISTRAR</a></div>
+            
+        </div>
+        <div class="tarjeta2">
+            <h3 class="titu_curso">Curso de Ingles</h3>
+            <div class="contorno">
+                <img src="jpg/icons8-idioma-50.png" class="idioma">
+            </div>
+            <p class="text">Desarrolla habilidades lingüísticas, gramática y comunicación efectiva en inglés.</p>
+            <div class="registro_ingle"><a href="paginas/ingles.html" class="a_redirigir">REGISTRAR</a></div>
+            
+        </div>
+        <div class="tarjeta3">
+            <h3 class="titu_curso">Curso de Fisica</h3>
+            <div class="contorno">
+                <img src="jpg/icons8-física-50.png" class="idioma">
+            </div>
+            <p class="text">Estudia leyes naturales, energía, movimiento y fenómenos físicos fundamentales.</p>
+            <div class="registro_fifu"><a href="paginas/fifu.html" class="a_redirigir">REGISTRAR</a></div>
+            
+        </div> 
+    </div>
+    <section id="cuerpo">
+        <div class="cuerpo" >
+            <form action="" class="form" novalidate>
+                <h2 class="form_tite">Registro</h2>
+                <div class="form_container">
+                    <div class="form_group">
+                        <input type="text"  name="nombre" id="nombre" class="input_one" placeholder=" ">
+                        <label for="nombre" class="label1">Nombre:</label>
+                        <span class="line_one"></span>
+                        <input type="text"  name="apellido" id="apellido" class="input_two" placeholder=" ">
+                        <label for="apellido" class="label2">Apellido:</label>
+                        <span class="line_two"></span>
+                        <div class="error"></div>
+                    </div>
+                    <div class="form_group">
+                        <input type="text"  name="user" id="user" class="form_input" placeholder=" ">
+                        <label for="user" class="form_label">Username:</label>
+                        <span class="form_line"></span>
+                        <div class="error"></div>
+                    </div>
+                    <div class="form_group">
+                        <input type="text"  name="email" id="email" class="form_input" placeholder=" ">
+                        <label for="email" class="form_label">Email:</label>
+                        <span class="form_line"></span>
+                        <div class="error"></div>
+                    </div>
+                    <div class="form_group">
+                        <input type="text"  name="adress" id="adress" class="form_input" placeholder=" ">
+                        <label for="adress" class="form_label">Direccion Domicilio:</label>
+                        <span class="form_line"></span>
+                        <div class="error"></div>
+                    </div>
+                    <div class="form_group">
+                        <input type="number"  name="num" id="num" class="form_input" placeholder=" " min="8" max="8">
+                        <label for="num" class="form_label">Tel(+502):</label>
+                        <span class="form_line"></span>
+                        <div class="error"></div>
+                    </div>
+                    <div class="form_group">
+                        <input type="password"  name="pass" id="pass" class="form_input" placeholder=" ">
+                        <label for="pass" class="form_label">Contraseña:</label>
+                        <span class="form_line"></span>
+                        <div class="error"></div>
+                    </div>
+                    <div class="form_group">
+                        <input type="password"  name="pass" id="pass" class="form_input" placeholder=" ">
+                        <label for="pass" class="form_label">Confirmar Contraseña:</label>
+                        <span class="form_line"></span>
+                        <div class="error"></div>
+                    </div>
+                    <div><input type="checkbox"> Acepto <a href="#" class="regi_a">Terminos y Condiciones</a></div>
+                    <h4 id="guardado" class="guardado"></h4>
+                    <input type="submit" class="form_submit" value="Registrar"  onclick="">
+                    <div class="form_submit"><a class="input_container" href="#inicio">Regresar al inicio</a></div>
+                </div>
+            </form>
+            <div class="error"></div>
+        </div>
+    </section>
+    <a target="_blank" href="https://icons8.com/icon/zxB19VPoVLjK/usuario">usuario</a> icono de <a target="_blank" href="https://icons8.com">Icons8</a>
+</body>
+<script src="js/registro.js"></script>
+</html>

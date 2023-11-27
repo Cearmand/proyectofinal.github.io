@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Fisica</title>
+</head>
+<body>
+    <div class="cuerpo">
+        <form class="form" calaction="datos.js">
+            <h2 class="form_title">Iniciar sesion</h2>
+            <div class="form_container">
+                <div class="form_group">
+                    <input type="text" name="user" id="user" class="form_input" placeholder=" ">
+                    <label for="user" class="form_label">Usuario</label>
+                    <span class="form_line"></span>
+                </div>
+                <div class="form_group">
+                    <input type="password" name="pass" id="pass" class="form_input" placeholder=" ">
+                    <label for="pass" class="form_label">Contraseña </label>
+                    <span class="form_line"></span>
+                </div>
+                <button id="botton" class="form_submit" onclick="mostar()" href="#prueba"><a href="#prueba">Ingresar</a></button>
+                <h4 id="respuesta"></h4>
+                <p id="respuesta" >No tienes cuenta? <a href="#" class="regi_a">Registrate</a></p>
+            </div>
+        </form>
+    </div>
+    <section id="prueba" class="prueba"></section>
+    <div id="show">
+        <div class="contenido">
+            <img class="img_mate" src="../jpg/estudiante_fifu.jpg" >
+            <div class="texto">
+                <h3>Curso de Fisica</h3>
+                <p >Introduccion a conceptos fundamentales que rigen el mundo físico que nos rodea. Los temas abarcan la mecánica, explorando el movimiento y las fuerzas; la termodinámica, que trata el calor y la energía; la electricidad y el magnetismo, que revelan los secretos de la electricidad y los imanes; y la óptica, que se ocupa del comportamiento de la luz. Además, se exploran principios básicos de la física cuántica y la relatividad. Este curso busca proporcionar a los principiantes una comprensión inicial de los fenómenos físicos, fomentando la curiosidad y sentando las bases para futuros estudios en esta disciplina.</p>
+            </div>
+        </div>
+        <div class="test">
+            <h1>QUIZ GAME</h1>
+            <section id="p0">
+                <h4>1- ¿Cuál de las siguientes unidades se utiliza para medir la velocidad?</h4>
+                <label class="caja">
+                    <input type="radio" value="1" name="p0" onclick="respuesta(0,this)">Newton
+                </label>
+                <label class="caja">
+                    <input type="radio" value="2" name="p0" onclick="respuesta(0,this)">Metro
+                </label>
+                <label class="caja">
+                    <input type="radio" value="3" name="p0" onclick="respuesta(0,this)">Kilometro por hora
+                </label>
+            </section>
+            <section id="p1">
+                <h4>2- ¿Qué ley de la física establece que "a toda acción le corresponde una reacción igual pero opuesta"?</h4>
+                <label class="caja">
+                    <input type="radio" value="1" name="p1"onclick="respuesta(1,this)">Ley de Coulomb
+                </label>
+                <label class="caja">
+                    <input type="radio" value="2" name="p1"onclick="respuesta(1,this)">Ley de Newton
+                </label>
+                <label class="caja">
+                    <input type="radio" value="3" name="p1" onclick="respuesta(1,this)">Ley de Ohm
+                </label>
+            </section>
+            <section id="p2">
+                <h4>3- ¿Cuál de las siguientes fuentes de energía es renovable?</h4>
+                <label class="caja">
+                    <input type="radio" value="1" name="p2" onclick="respuesta(2,this)">Carbon
+                </label>
+                <label class="caja">
+                    <input type="radio" value="2" name="p2" onclick="respuesta(2,this)">Petroleo
+                </label>
+                <label class="caja">
+                    <input type="radio" value="3" name="p2" onclick="respuesta(2,this)">Solar
+                </label>
+            </section>
+            <section id="p3">
+                <h4>4- ¿En qué unidad se mide la corriente eléctrica?</h4>
+                <label class="caja">
+                    <input type="radio" value="1" name="p3" onclick="respuesta(3,this)">Voltio
+                </label>
+                <label class="caja">
+                    <input type="radio" value="2" name="p3"onclick="respuesta(3,this)">Amperio
+                </label>
+                <label class="caja">
+                    <input type="radio" value="3" name="p3"onclick="respuesta(3,this)">Ohmio
+                </label>
+            </section>
+            <section id="p4">
+                <h4>5-  ¿Qué tipo de energía posee un objeto en movimiento?</h4>
+                <label class="caja">
+                    <input type="radio" value="1" name="p4" onclick="respuesta(4,this)">Energia termica
+                </label>
+                <label class="caja">
+                    <input type="radio" value="2" name="p4" onclick="respuesta(4,this)">Energia potencial
+                </label>
+                <label class="caja">
+                    <input type="radio" value="3" name="p4" onclick="respuesta(4,this)">Energia cinetica
+                </label>
+            </section>
+            <button onclick="corregir()" class="boton_test">CORREGIR</button>
+            <h2>Cantidad acertadas: <span id="resultado"></span></h2>
+        </div>
+    </div>
+    
+</body>
+<script>
+ function mostar() {
+     let user = document.querySelector("#user").value
+     let pass = document.querySelector("#pass").value
+     let correcto=document.getElementById("respuesta")
+     let incorrecto=document.getElementById("guardado")
+     if (user=='alumno'&&pass=='2023') {
+         document.getElementById('show').style.display='block';
+         correcto.innerText='Cuenta verificada.'
+         correcto.style.color='green';
+     }else{
+         correcto.innerText='Ingreso mal el usuario/contraseña'
+         correcto.style.color='red';
+     }
+ }
+    let correctas=[3,2,3,2,3]
+    let opcion_elegida=[]
+    let cantidad_correcta=0
+    function respuesta(num_pregunta,selccionada) {
+        opcion_elegida[num_pregunta]=selccionada.value
+        id="p" + num_pregunta
+        labels = document.getElementById(id).childNodes
+        labels[3].style.backgroundColor="white"
+        labels[5].style.backgroundColor="white"
+        labels[7].style.backgroundColor="white"
+
+        selccionada.parentNode.style.backgroundColor="rgb(163, 163, 177)"
+    }
+    function corregir(){
+        cantidad_correcta=0
+        for (i=0; i<correctas.length;i++) {
+            if (correctas[i]==opcion_elegida[i]) {
+                cantidad_correcta++
+            }
+        }
+        document.getElementById("resultado").innerText = cantidad_correcta+'/5'
+        
+    }
+</script>
+<style>
+  /* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap'); */
+  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Didact+Gothic&family=Poppins:wght@100&family=Questrial&family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Courier Prime', monospace;
+    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Questrial', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.prueba{
+    border: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+h1{
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    padding: 10px 0;
+}
+#show{
+    display: none;
+}
+.test{
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    
+}
+section{
+    border: 2px solid rgb(19, 17, 24);
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px 0;
+}
+.caja{
+    display: block;
+    padding: 7px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px dashed #ccc;
+    margin-bottom: 3px;
+}
+.caja:hover{
+    background: rgb(163, 163, 177);
+}
+.boton_test{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-radius: black;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.boton_test:hover{
+    background: #000;
+    color: #ccc;
+}
+h2{
+    text-align: center;
+}
+#resultado{
+    font-size: 30px;
+    color: darkred;
+}
+.img_mate{
+    margin: 50px ;
+    width: 500px;
+}
+.contenido{
+    display: flex;
+
+}
+h3{
+    position: relative;
+    left: 100px;
+    top: -10px;
+    font-size: 30px;
+    text-align: justify;
+}
+.texto{
+    margin: 100px;
+    position: relative;
+    top: 30px;
+    left: -90px;
+    text-align: justify;
+    font-size: large;
+}
+.cuerpo{
+    background-color: #fff;
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;  
+    display: flex;
+    min-height: 100vh;
+}
+.form{
+    background-color: #fff;
+    margin: auto;
+    width: 90%
+    max-width: 100px; 
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);    
+    text-align: center;  
+}
+
+.form_title{
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+.form_container{
+    margin-top: 3em;
+    display: grid;
+    gap: 1.2em;
+}
+.form_group{
+    position: relative;
+    --color: #7D7C7C;
+}
+.form_input{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Roboto', sans-serif;
+}
+.form_input:not(:placeholder-shown){
+    color: #4d4646;
+}
+/* Sirve para mover los input 
+en .form_input:not(:placeholder-shown)+.form_label sirve para los placeholder se queden vacios*/
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown)+.form_label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #17194c;
+}
+/* el label le damos movimiento */
+.form_label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+.form_submit{
+    background-color: #045757;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+.form_line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #044343;
+    transform: scale(0);
+    transform: left bottom;
+    /* transition: transform .4s;
+    animation: spin 1.5s infinite linear; */
+}
+/* @keyframes spin {
+    100%{
+        transform: rotate(-360deg);
+    }
+} */
+
+.form_input:focus ~ .form_line,
+.form_input:not(:placeholder-shown)~.form_line{
+    transform: scale(1);
+}
+
+@media (max-width:425px){
+    .form_title{
+        font-size: 1.8rem;
+    }
+}
+.regi_a{
+    
+    color: #045757;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+ #centrar{
+text-align: center;
+} 
+
+</style>
+</html>
